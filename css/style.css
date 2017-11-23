@@ -1,0 +1,39 @@
+body{
+	margin: 0;
+	padding: 0;
+	font-family: 'Montserrat', sans-serif;
+	line-height: 1.6;
+	font-size: 16px;
+}
+/*font-family: 'Montserrat', sans-serif;*/
+header{
+	background: linear-gradient(90deg, orange, orange 60%, cyan);
+}
+header .nav{
+	display: flex;
+}
+header nav .logo{
+	display: inline-block;
+	text-decoration: none;
+	color: 
+}
+header nav .navigation{
+	display: flex;
+	margin: 0px;
+	padding: 0px;
+}
+header nav .navigation li{
+	list-style: none;
+}
+header nav .navigation li a{
+	text-decoration: none;
+}
+header .nav .hamburger{
+	padding: 0;
+	display: none;
+}
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px) { 
+	
+ }
