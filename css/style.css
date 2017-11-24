@@ -7,33 +7,203 @@ body{
 }
 /*font-family: 'Montserrat', sans-serif;*/
 header{
-	background: linear-gradient(90deg, orange, orange 60%, cyan);
+	background: linear-gradient(0deg, #1385e0, #00adff 60%);
+	position: relative;
+}
+header .top-line{
+	display: flex;
+	align-items: center;
 }
 header .nav{
 	display: flex;
+	align-items: center;
+	color: #fff;
+	justify-content: space-between;
+	flex: 1;
 }
-header nav .logo{
+header .logo{
 	display: inline-block;
 	text-decoration: none;
-	color: 
+	color: inherit;
+	margin: 0px 20px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
 }
 header nav .navigation{
 	display: flex;
 	margin: 0px;
 	padding: 0px;
+	box-shadow: -1px -1px 0px rgba(19 ,76, 224, 0.8);
 }
 header nav .navigation li{
 	list-style: none;
+	/*margin: 0px 20px;*/
+	padding: 20px 20px;
+	box-shadow: 1px -1px 0px rgba(19 ,76, 224, 0.8);
+	transition: all 0.5s ease;
+}
+header nav .navigation li:hover{
+	background: linear-gradient(0deg, #00adff 60%, #1385e0);
+}
+header nav .navigation li:last-child{
+	/*box-shadow: 0px -1px 3px rgba(19 ,76, 224, 0.8);*/
+}
+header nav .navigation li:first-child{
+	/*box-shadow: 0px -1px 3px rgba(19 ,76, 224, 0.8);*/
 }
 header nav .navigation li a{
 	text-decoration: none;
+	color: inherit;
 }
-header .nav .hamburger{
+header .top-line .hamburger{
 	padding: 0;
 	display: none;
+	outline: none;
+}
+.hamburger-inner, .hamburger-inner::before, .hamburger-inner::after{
+	background-color: #fff;
+}
+header .login{
+    margin: 0px;
+    padding: 0px;
+}
+header .login li{
+	text-decoration: none;
+	color: inherit;
+	list-style: none;
+	box-shadow: -1px 0px 0px rgba(19 ,76, 224, 0.8);
+	padding: 20px;
+	transition: all 0.5s ease;
+	transition: all 0.5s ease;
+	cursor: pointer;
+}
+header .login li a{
+	color: #fff;
+	text-decoration: none;
+}
+header .login li:hover{
+	background: linear-gradient(0deg, #00adff 60%, #1385e0);
+}
+/*main section*/
+.sc-main{
+	background-color: #fff;
+	min-height: 600px;
+	background-image: url('../img/bg.jpg');
+	background-position: center;
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-attachment: fixed;
+	overflow: auto;
+}
+.sc-main .main-inner{
+	margin-top: 100px;
+	color: #fff;
+}
+.sc-main .caption{
+	text-align: center;
+	margin-top: 50px;
+}
+.sc-main .caption .h2{
+	font-size: 50px;
+	font-family: 'Montserrat', sans-serif;
+	letter-spacing: 3px;
+	text-shadow: 2px 2px 4px rgba(225,225,225, .9);
+	margin: 0px;
+}
+.sc-main .caption p{
+	margin-top: 20px;
+	line-height: 1.8;
+	font-size: 30px;
+	word-spacing: 5px;
+	/*padding: 0px 30px;*/
+	text-shadow: 1px 1px 2px rgba(225,225,225, .9);
+}
+.button{
+	padding: 10px 50px;
+	background: linear-gradient(0deg, #00adff 60%, #1385e0);
+	font-size: 18px;
+	box-shadow: 0px 2px 0px rgba(19 ,76, 224, 0.8);
+	border-radius: 5px;
+	transition: all 0.5s ease;
+	border: none;
+	letter-spacing: 3px;
+	text-transform: uppercase;
+	color: #fff;
+}
+.button:hover{
+	transform: scale(1.1);
+	letter-spacing: 5px;
+	background: linear-gradient(0deg, #00adff 60%, rgba(19 ,63, 224, 0.8));
+	box-shadow: 0px 2px 0px rgba(164 ,19, 224, 0.8);
 }
 
-// Extra large devices (large desktops, 1200px and up)
-@media (min-width: 1200px) { 
-	
- }
+@media (max-width: 575px) {}
+
+@media (max-width: 767px) {}
+
+
+@media (max-width: 991px){
+	header .top-line .hamburger{
+		padding: 0;
+		display: inline-block;
+	}
+	.sc-main .caption .h2{
+		font-size: 10px;
+	}
+	header .nav{
+		display: none;
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 72px;
+	}
+	header nav .navigation li a{
+		display: block;
+	}
+	header nav .navigation{
+		display: block;
+		width: 100%;
+	}
+	header nav .navigation li{
+		display: block;
+		width: 100%;
+		background: linear-gradient(0deg, #1385e0, #00adff 60%);
+		box-shadow: none;
+		transition: all 0.5s ease;
+	}
+	header nav .navigation li:hover{
+		background: linear-gradient(0deg, #13d0e0, #00dcff 60%);
+	}
+	header .login{
+		display: block;
+		width: 100%;
+	}
+	header .login li{
+		display: block;
+		width: 100%;
+		background: linear-gradient(0deg, #1385e0, #00adff 60%);
+		box-shadow: none;
+	}
+	header .login li:hover{
+		background: linear-gradient(0deg, #13d0e0, #00dcff 60%);
+	}
+	header .top-line{
+		padding: 20px 0px;
+		justify-content: space-between;
+	}
+}
+
+@media (max-width: 1199px){
+	header .nav .hamburger{
+		padding: 0;
+		/*display: none;*/
+	}
+	header .nav{
+		display: flex;
+	}
+}
+
+
+ 
