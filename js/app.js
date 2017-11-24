@@ -8,7 +8,9 @@ $(document).ready(function(){
 			$(".nav").fadeOut().fadeIn('slow');
 		}
 	});
-	window.resize = function(){
-		console.log('sc');
-	}
+	$( window ).resize(function(e){
+		if(e >= 1200){
+			$(".nav").css('display', 'flex');
+		}
+	});
 });

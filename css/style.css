@@ -200,9 +200,6 @@ header .login li:hover{
 		padding: 0;
 		/*display: none;*/
 	}
-	header .nav{
-		display: flex;
-	}
 }
 
 
