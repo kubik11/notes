@@ -1,9 +1,16 @@
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
 body{
 	margin: 0;
 	padding: 0;
 	font-family: 'Montserrat', sans-serif;
 	line-height: 1.6;
 	font-size: 16px;
+	position: relative;
 }
 /*font-family: 'Montserrat', sans-serif;*/
 header{
@@ -20,6 +27,7 @@ header .nav{
 	color: #fff;
 	justify-content: space-between;
 	flex: 1;
+	z-index: 2;
 }
 header .logo{
 	display: inline-block;
@@ -138,7 +146,126 @@ header .login li:hover{
 	background: linear-gradient(0deg, #00adff 60%, rgba(19 ,63, 224, 0.8));
 	box-shadow: 0px 2px 0px rgba(164 ,19, 224, 0.8);
 }
-
+/*Forms sections*/
+.overlay{
+	display: none;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #000;
+	opacity: 0.5;
+	z-index: 1;
+}
+.forms{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	display: none;
+}
+.forms .wrap-sign-up{
+	width: 60%;
+	margin: 10% auto 0 auto;
+	background-color: #fff;
+	z-index: 5;
+	position: relative;
+	opacity: 1;
+	border-radius: 10px;
+}
+.forms .wrap-sign-up form .h2{
+	font-size: 16px;
+	padding: 15px 0px;
+	text-align: center;
+}
+.forms .wrap-sign-up form .input-groupe{
+	padding: 20px;
+	border-top: 1px solid #cdcdcd;
+	border-bottom: 1px solid #cdcdcd;
+}
+.forms .wrap-sign-up form .input-groupe .input{
+	display: block;
+	margin-bottom: 10px;
+	border-radius: 5px;
+	width: 100%;
+	padding: 10px;
+	border-color: #cdcdcd;
+	border-style: solid;
+}
+.forms .wrap-sign-up form .input-groupe .input:focus{
+	border-radius: 5px;
+	/*outline: none;*/
+	outline-offset: -1px;
+}
+.forms .wrap-sign-up form .button-groupe{
+	text-align: right;
+	padding: 20px;
+}
+.forms .wrap-sign-up form .button{
+	background-color: transparent;
+	padding: 10px 20px;
+	font-size: 16px;
+	text-transform: capitalize;
+}
+.forms .wrap-sign-up form .sign-in{
+	background: green;
+	opacity: 0.5;
+	margin-right: 10px;
+}
+.sign-up{
+	display: none;
+}
+/*login form*/
+.forms .wrap-sign-up form .input-groupe input[type="checkbox"]{
+	display: inline-block;
+	width: auto;
+}
+.forms .wrap-sign-up .login-form .h2{
+	text-align: left;
+	padding-left: 20px;
+}
+.forms .wrap-sign-up .login-form .register{
+	background: transparent;
+	float: left;
+	box-shadow: none;
+	border: 2px solid #cdcdcd;
+	color: #cdcdcd;
+}
+.forms .wrap-sign-up .login-form .login{
+	background: green;
+	opacity: 0.5;
+}
+.forms .wrap-sign-up .login-form .hint{
+	display: inline-block;
+	float: right;
+	text-decoration: none;
+	color: blue;
+	font-weight: 600;
+}
+#login-form{
+	display: none;
+}
+/*forgot form*/
+#forgot-form{
+	display: none;
+}
+/*footer*/
+footer{
+	background: linear-gradient(0deg, #1385e0, #00adff 60%);
+	padding: 10px 0px;
+	color: #fff;
+	font-family: 'Montserrat', sans-serif;
+}
+footer .copy{
+	text-align: center;
+	letter-spacing: 3px;
+}
+footer .gunter{
+	text-align: right;
+}
 @media (max-width: 575px) {}
 
 @media (max-width: 767px) {}
