@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Online Notes!</title>
+    <title>My Notes!</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -12,7 +12,7 @@
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700" rel="stylesheet">
     
   </head>
-  <body>
+  <body class="my-notes">
     <div class="overlay"></div>
     <header>
         <div class="container-fluid">
@@ -25,11 +25,15 @@
           </button>
           <nav class="nav" id="nav">
           <ul class="navigation">
-            <li class="active-item"><a href="#">Home</a></li>
+            <li><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Contact us</a></li>
+            <li class="active-item"><a href="#">My Notes</a></li>
           </ul>
-          <ul class="login"><li><a href="#" id="to-login">Log in</a></li></div>
+          <ul class="login">
+            <li><a href="#">Logged in as <b>user</b></a></li>
+            <li><a href="#" id="to-login">Log out </a></li>
+          </ul>
         </nav>
         </div>
       </div>
@@ -40,11 +44,16 @@
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="caption">
-                <h2 class="h2">Online Notes App</h2>
-                <p>Your Notes wherever you go.
-                  Easy to use, protect all your notes!
-                </p>
-                <button class="button" id="sign-up">Sign up</button>
+                <div class="buttons">
+                  <button class="button" id="add-note">Add Note</button>
+                  <button class="button" id="edit">Edit</button>
+                  <button class="button" id="done">Done</button>
+                  <button class="button " id="all-note">All Note</button>
+                </div>
+                <textarea name="notates" id="notates"  rows="10"></textarea>
+                <div id="notes-field" class="notes-field">
+                  <!-- Retrive data from DB by AJAX -->
+                </div>
               </div>
             </div>
           </div>

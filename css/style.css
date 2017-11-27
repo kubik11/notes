@@ -3,7 +3,10 @@
   display: table;
   clear: both;
 }
-
+/*active nav*/
+.active-item{
+	background: rgba(45, 129, 216, 1);
+}
 body{
 	margin: 0;
 	padding: 0;
@@ -86,9 +89,13 @@ header .login li{
 	transition: all 0.5s ease;
 	cursor: pointer;
 }
+.my-notes header .login{
+	display: flex;
+}
 header .login li a{
 	color: #fff;
 	text-decoration: none;
+	display: block;
 }
 header .login li:hover{
 	background: linear-gradient(0deg, #00adff 60%, #1385e0);
@@ -141,8 +148,8 @@ header .login li:hover{
 	color: #fff;
 }
 .button:hover{
-	transform: scale(1.1);
-	letter-spacing: 5px;
+	transform: scale(1.01);
+	letter-spacing: 4px;
 	background: linear-gradient(0deg, #00adff 60%, rgba(19 ,63, 224, 0.8));
 	box-shadow: 0px 2px 0px rgba(164 ,19, 224, 0.8);
 }
@@ -215,7 +222,7 @@ header .login li:hover{
 	opacity: 0.5;
 	margin-right: 10px;
 }
-.sign-up{
+#sign-up-form{
 	display: none;
 }
 /*login form*/
@@ -265,6 +272,40 @@ footer .copy{
 }
 footer .gunter{
 	text-align: right;
+}
+/*************************************MY NOTES*********************************************/
+.my-notes .sc-main .caption #edit, #done{
+	order: 2;
+}
+.my-notes .sc-main .caption #all-note, #done{
+	display: none;
+}
+.my-notes .sc-main .caption .buttons{
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 30px;
+}
+.my-notes .sc-main .caption #notates{
+	width: 100%;
+	max-width: 100%;
+	border-left-width: 10px;
+	border-color: rgba(19, 76, 224, .8);
+	color: #eb00ff;
+	font-size: 18px;
+	font-family: 'Montserrat', sans-serif;
+}
+/***************************profile***************************************/
+.profile header .login{
+	display: flex;
+}
+.profile .caption .h2{
+	font-size: 30px;
+	text-align: left;
+	margin-bottom: 30px;
+}
+.profile .caption table{
+	color: #fff;
+	background: linear-gradient(0deg, #1385e0, #00adff 60%);
 }
 @media (max-width: 575px) {}
 

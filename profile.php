@@ -1,18 +1,19 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <title>Online Notes!</title>
+    <title>Profile</title>
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/hamburgers.css">
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,400i,700" rel="stylesheet">
     
   </head>
-  <body>
+  <body class="profile">
     <div class="overlay"></div>
     <header>
         <div class="container-fluid">
@@ -25,11 +26,15 @@
           </button>
           <nav class="nav" id="nav">
           <ul class="navigation">
-            <li class="active-item"><a href="#">Home</a></li>
+            <li class="active-item"><a href="#">Profile</a></li>
             <li><a href="#">Help</a></li>
             <li><a href="#">Contact us</a></li>
+            <li><a href="#">My Notes</a></li>
           </ul>
-          <ul class="login"><li><a href="#" id="to-login">Log in</a></li></div>
+          <ul class="login">
+            <li><a href="#">Logged in as <b>user</b></a></li>
+            <li><a href="#" id="to-login">Log out </a></li>
+          </ul>
         </nav>
         </div>
       </div>
@@ -40,11 +45,21 @@
           <div class="row">
             <div class="col-md-6 offset-md-3">
               <div class="caption">
-                <h2 class="h2">Online Notes App</h2>
-                <p>Your Notes wherever you go.
-                  Easy to use, protect all your notes!
-                </p>
-                <button class="button" id="sign-up">Sign up</button>
+               <h2 class="h2">General Account Setting:</h2>
+               <table class="table table-bordered table-hover table-striped thead-light">
+                 <tr id="UserID" class="t-row">
+                   <td>Username</td>
+                   <td>value</td>
+                 </tr>
+                 <tr id="EmailID" class="t-row">
+                   <td>Email</td>
+                   <td>value</td>
+                 </tr>
+                 <tr id="PasswordID" class="t-row">
+                   <td>Password</td>
+                   <td>value</td>
+                 </tr>
+               </table>
               </div>
             </div>
           </div>
@@ -53,43 +68,27 @@
     </section>
     <section class="forms">
       <div class="wrap-sign-up">
-        <form action="#" class="sign-up clearfix" id="sign-up-form" method="get">
-          <h2 class="h2">Sign up today and start using our Online Notes App !</h2>
+        <form action="#" class="clearfix" id="" method="get">
+          <h2 class="h2">Edit Username</h2>
           <div class="input-groupe">
             <label for="username" hidden>Username:</label>
             <input type="text" name="username" placeholder="Username" id="username" class="input">
-
-            <label for="email" hidden>Email:</label>
-            <input type="text" name="email" placeholder="Email" id="email" class="input">
-
-            <label for="password" hidden>Password:</label>
-            <input type="text" name="password" placeholder="Choose a password" id="password" class="input">
-
-            <label for="confirm" hidden>Confirm:</label>
-            <input type="text" name="confirm" placeholder="Confirm a password" id="confirm" class="input">
           </div>
           <div class="button-groupe">
-            <input type="submit" name="submit" value="Sign in" class="button sign-in">
-            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-sign-up">
+            <input type="submit" name="submit" value="Submit" class="button submit">
+            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-username">
           </div> 
         </form> 
-        <!-- login form -->
-         <form action="#" class="login-form clearfix" id="login-form" method="get">
-          <h2 class="h2">Login:</h2>
+        <!-- EMAIL form -->
+         <form action="#" class="email-form clearfix" id="email-change" method="get">
+          <h2 class="h2">Enter new email:</h2>
           <div class="input-groupe">
             <label for="login" hidden>Login:</label>
-            <input type="text" name="login" placeholder="Login" id="login" class="input">
-
-            <label for="login-password" hidden>Password:</label>
-            <input type="password" name="password" placeholder="Password" id="login-password" class="input">
-            <input type="checkbox" name="checkbox"  id="checkbox" class="input">
-            <label for="remember">Remember me</label>
-            <a href="#" class="hint" id="hint">Forgot password?</a>
+            <input type="text" name="login" placeholder="Email" id="new-email" class="input">
           </div>
           <div class="button-groupe">
-            <input type="button" name="register" value="Register" class="button register" id="register">
-            <input type="submit" name="login" value="Login" class="button login">
-            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-login">
+            <input type="submit" name="submit" value="Login" class="button email">
+            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-email">
           </div> 
         </form> 
       <!-- forgot form -->
