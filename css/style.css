@@ -307,6 +307,9 @@ footer .gunter{
 	color: #fff;
 	background: linear-gradient(0deg, #1385e0, #00adff 60%);
 }
+#username-change, #email-change, #password-change{
+	display: none;
+}
 @media (max-width: 575px) {}
 
 @media (max-width: 767px) {}

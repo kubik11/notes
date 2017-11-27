@@ -68,11 +68,11 @@
     </section>
     <section class="forms">
       <div class="wrap-sign-up">
-        <form action="#" class="clearfix" id="" method="get">
+        <form action="#" class="clearfix" id="username-change" method="get">
           <h2 class="h2">Edit Username</h2>
           <div class="input-groupe">
             <label for="username" hidden>Username:</label>
-            <input type="text" name="username" placeholder="Username" id="username" class="input">
+            <input type="text" name="username" placeholder="Username" id="user-changed" class="input">
           </div>
           <div class="button-groupe">
             <input type="submit" name="submit" value="Submit" class="button submit">
@@ -91,17 +91,20 @@
             <input type="button" name="cancel" value="Cancel" class="button" id="cancel-email">
           </div> 
         </form> 
-      <!-- forgot form -->
-         <form action="#" class="forgot-form login-form clearfix" id="forgot-form" method="get">
-          <h2 class="h2">Forgot password? Enter your email address:</h2>
+      <!-- Password form -->
+         <form action="#" class="password-form clearfix" id="password-change" method="get">
+          <h2 class="h2">Enter current and new password:</h2>
           <div class="input-groupe">
-            <label for="email" hidden>Email:</label>
-            <input type="text" name="email" placeholder="Login" id="login" class="input">
+            <label for="password" hidden>Current password:</label>
+            <input type="password" name="password" placeholder="Your current password" id="current-password" class="input">
+             <label for="new-password" hidden>New password:</label>
+            <input type="password" name="new-password" placeholder="Your new password" id="new-password" class="input">
+             <label for="confirm-password" hidden>Confirm password:</label>
+            <input type="password" name="new-password" placeholder="Confirm your password" id="confirm-password" class="input">
           </div>
           <div class="button-groupe">
-            <input type="button" name="register" value="Register" class="button register">
-            <input type="submit" name="sub" value="Submit" class="button login">
-            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-forgot">
+            <input type="submit" name="submit" value="Submit" class="button">
+            <input type="button" name="cancel" value="Cancel" class="button" id="cancel-new-password">
           </div> 
         </form> 
       </div>

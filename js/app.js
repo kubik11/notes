@@ -27,8 +27,9 @@ $(document).ready(function(){
 			overlay: $('.overlay'),
 			loginForm: $('#login-form'),
 			forgotForm: $('#forgot-form'),
-			// userChange: $('#username-change'), //from profile page 
+			userChange: $('#username-change'), //from profile page 
 			emailChange: $('#email-change'),
+			passwordChange: $('#password-change')
 		}
 	}
 	window.addEventListener('click', onClick);
@@ -96,20 +97,34 @@ $(document).ready(function(){
 			viewUI.DOMStrings.userChange.fadeOut();
 			viewUI.DOMStrings.overlay.fadeOut();
 		}
+		if (e.id == 'cancel-email') {
+			viewUI.DOMStrings.forms.fadeOut();
+			viewUI.DOMStrings.emailChange.fadeOut();
+			viewUI.DOMStrings.overlay.fadeOut();
+		}
+		if (e.id == 'cancel-new-password') {
+			viewUI.DOMStrings.forms.fadeOut();
+			viewUI.DOMStrings.passwordChange.fadeOut();
+			viewUI.DOMStrings.overlay.fadeOut();
+		}
 		if(e.parentNode.classList.contains('t-row')){
 			id = e.parentNode.id;
 			if (id == 'UserID') {
 				 viewUI.DOMStrings.forms.fadeIn();
-				// viewUI.DOMStrings.userChange.fadeIn();
-				// viewUI.DOMStrings.overlay.fadeIn();
+				 viewUI.DOMStrings.userChange.fadeIn();
+				 viewUI.DOMStrings.overlay.fadeIn();
 				console.log('WRONG');
 			}
 			if(id == 'EmailID'){
-				// viewUI.DOMStrings.forms.fadeIn();
-				// viewUI.DOMStrings.emailChange.fadeIn();
-				// viewUI.DOMStrings.overlay.fadeIn();
+				 viewUI.DOMStrings.forms.fadeIn();
+				 viewUI.DOMStrings.emailChange.fadeIn();
+				 viewUI.DOMStrings.overlay.fadeIn();
 			}
-			
+			if (id == 'PasswordID') {
+				 viewUI.DOMStrings.forms.fadeIn();
+				 viewUI.DOMStrings.passwordChange.fadeIn();
+				 viewUI.DOMStrings.overlay.fadeIn();
+			}
 			console.log(e.parentNode.id);
 		}
 	}
